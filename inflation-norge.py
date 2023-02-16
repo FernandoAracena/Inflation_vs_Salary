@@ -7,7 +7,7 @@
 # # # Konsumgruppe DF
 
 import pandas as pd
-import ipywidgets as widgets
+
 from IPython.display import display
 import matplotlib.pyplot as plt
 
