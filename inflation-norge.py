@@ -7,6 +7,9 @@
 # # # Konsumgruppe DF
 
 import pandas as pd
+import ipywidgets as widgets
+from IPython.display import display
+import matplotlib.pyplot as plt
 
 df_produkter = pd.read_csv("Tabell_03014_Detaljer.csv", encoding='ISO-8859-1',sep='\t')
 df_produkter['konsumgruppe'] = df_produkter['konsumgruppe'].astype(str)
@@ -38,10 +41,6 @@ df_lønn
 
 
 # # # Plot Data
-
-import ipywidgets as widgets
-from IPython.display import display
-import matplotlib.pyplot as plt
 
 konsumgruppe_label = widgets.Label('Select Konsumgruppe:')
 options_konsumgruppe = ['Konsumgruppe'] + df_produkter['Konsumgruppe'].unique().tolist()
