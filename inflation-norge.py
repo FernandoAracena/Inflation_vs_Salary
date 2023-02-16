@@ -8,7 +8,7 @@
 
 import pandas as pd
 
-df_produkter = pd.read_csv("C:/Users/Bruker/Tabell_03014_Detaljer.csv", encoding='ISO-8859-1',sep='\t')
+df_produkter = pd.read_csv("Tabell_03014_Detaljer.csv", encoding='ISO-8859-1',sep='\t')
 df_produkter['konsumgruppe'] = df_produkter['konsumgruppe'].astype(str)
 df_produkter = df_produkter.drop(columns=list(df_produkter.columns[2:39]))
 df_produkter = df_produkter.drop(columns=["statistikkvariabel"])
@@ -22,7 +22,7 @@ df_produkter
 
 # # # Lønn DF
 
-df_lønn = pd.read_csv("C:/Users/Bruker/Tabell_11419_Lønn.csv", encoding='ISO-8859-1',sep='\t')
+df_lønn = pd.read_csv("Tabell_11419_Lønn.csv", encoding='ISO-8859-1',sep='\t')
 df_lønn = df_lønn[(df_lønn["kjønn"] == "Begge kjønn") & (df_lønn["yrke"] == "Alle yrker") & (df_lønn["sektor"] == "Sum alle sektorer")]
 df_lønn = df_lønn.drop(columns=["statistikkvariabel","statistikkmål","kjønn","yrke","sektor"] + [col for col in df_lønn.columns if "Heltidsansatte" in col or "Deltidsansatte" in col])
 df_lønn.rename(columns=lambda x: x.replace(" I alt", ""), inplace=True)
