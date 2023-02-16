@@ -8,7 +8,6 @@
 
 import pandas as pd
 
-from IPython.display import display
 import matplotlib.pyplot as plt
 
 df_produkter = pd.read_csv("Tabell_03014_Detaljer.csv", encoding='ISO-8859-1',sep='\t')
